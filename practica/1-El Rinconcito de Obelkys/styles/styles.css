@@ -1,0 +1,188 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #2a2b2b;
+    --primario: #fa5fc9;
+    --secundario: #ffc107;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    background-image: linear-gradient(var(--blanco), #DFe9F3);
+    margin: 0;
+    font-family: 'Montserrat', 'Krub', sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3,
+footer {
+    text-align: center;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/*Navegacion*/
+
+.nav-bg {
+    background-color: var(--primario);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+nav a {
+    padding: 1rem;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: var(--secundario);
+}
+
+
+/*section 'hero'*/
+
+.hero {
+    color: var(--blanco);
+    background-image: url(../img/images.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*position: especifica el tipo de posicion que se le dara a un elemento. Por default, los elementos tienen 'position: static'
+position: relative: Para simplificar, la pagina cargara de manera normal como si el elemento relative no estuviese ahi.
+El elemento se ajustara a la altura de su ancestro mas proximo (que no sea static)*/
+
+
+/*main*/
+
+.secciones {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2rem;
+}
+
+main {
+    padding: 1rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    box-shadow: 0px 7px 12px 10px rgba(0, 0, 0, 0.31);
+}
+
+.servicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icono {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--secundario);
+    border-radius: 50%;
+}
+
+
+/*Formulario*/
+
+form {
+    margin: 0 auto;
+    max-width: 50rem;
+    padding: 1rem;
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    border-radius: 1rem;
+}
+
+fieldset {
+    border: none;
+}
+
+fieldset legend {
+    color: var(--secundario);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+fieldset .input-text {
+    padding: 1rem;
+    border-radius: .5rem;
+    width: 100%;
+}
+
+fieldset label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+fieldset .campos {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .secciones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
